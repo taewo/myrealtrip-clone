@@ -1,65 +1,114 @@
 <template>
-  <section class="container">
+  <div>
     <div>
-      <app-logo/>
-      <h1 class="title">
-        myrealtrip-clone
-      </h1>
-      <h2 class="subtitle">
-        Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
-      </div>
+      <header class="header">
+        <div class="header__top">
+          <div class="content-container">
+            <div class="header__top__left">
+              <a href="/">
+                <img
+                  src="https://www.myrealtrip.com/webpack/5e63007c40ef9effbda3d797ea314a0e.png"
+                  alt="logo"
+                  class="home-logo"
+                >
+              </a>
+            </div>
+            <div class="header__top__right">
+              <div class="header__top__right__container">
+                <div class="menu partner">
+                  <a href="/about/becomeguide">파트너등록하기</a>
+                </div>
+                <div class="menu login">
+                  <a href="/users/sign_in">로그인</a>
+                </div>
+                <div class="menu signup">
+                  <a href="/users/sign_up">회원가입</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="content-container">1</div>
+        </div>
+      </header>
     </div>
-  </section>
+    <main>
+      <h1>main</h1>
+    </main>
+  </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
-
 export default {
-  components: {
-    AppLogo
-  }
-}
+  components: {}
+};
 </script>
 
-<style>
-.container {
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style lang='scss'>
+html,
+body {
+  margin: 0;
 }
 
-.title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 1 */
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+a {
+  text-decoration: none;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+.header {
+  background-color: #2b96ed;
+  width: 100%;
+  height: 123px;
+  &__top {
+    height: 73px;
+    .home-logo {
+      width: 128px;
+      height: 28px;
+    }
+    &__left {
+      width: 13%;
+      float: left;
+      margin-top: 21px;
+    }
+    &__right {
+      display: inline-block;
+      width: 86%;
+      font-size: 15px;
+      .menu {
+        float: left;
+        margin-top: 21px;
+        margin-right: 8px;
+        &.partner {
+          padding: 6px 12px;
+        }
+        &.login {
+          padding: 6px 12px;
+        }
+        &.signup {
+          padding: 6px 32px;
+          margin-left: 12px;
+          border: 1px solid #fff;
+        }
+      }
+      &__container {
+        float: right;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    height: 53px;
+  }
 }
 
-.links {
-  padding-top: 15px;
+.content-container {
+  margin: 0 102px;
+  height: 100%;
+  // border: 1px solid red;
+  position: relative;
 }
 </style>
 
