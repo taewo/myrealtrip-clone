@@ -77,7 +77,9 @@
             <h2>
               어디로 떠나세요?
             </h2>
-            <input type="text" placeholder="여행지나 상품을 검색해보세요!">
+            <div class="search_input">
+              <input type="text" placeholder="여행지나 상품을 검색해보세요!">
+            </div>
           </section>
         </div>
 
@@ -163,34 +165,33 @@ a {
     li {
       position: relative;
       display: inline-block;
-      height: 50px;
       line-height: 50px;
+      margin: 0 20px;
     }
     li:hover {
       color: red;
       // border-bottom-color: $white-font;
-      border-bottom: 3px solid red;
+      // border-bottom: 3px solid red;
+    }
+    li:hover a::before{
+      position: absolute;
+      bottom: 0px;
+      content: '';
+      width: 100%;
+      border-bottom:3px solid red;
     }
     a {
+      display: inline-block;
       box-sizing: border-box;
-      height: 50px;
       color: inherit;
-      margin: 0 12px;
       span {
-        margin: 0 4px;
         box-sizing: border-box;
-      }
-      span:first-child {
-        margin-left: 0;
       }
       img {
         position: absolute;
         right: 0;
         top: 7px;
       }
-    }
-    a:first-child {
-      margin-left: 0;
     }
     color: $white-font;
     font-size: 16px;
@@ -201,6 +202,7 @@ a {
 // ======= main 시작
 .main {
   .first {
+
     background-color: $blue-backgroundcolor;
     height: 309px;
     border-top: 1px solid #1583db;
@@ -208,7 +210,14 @@ a {
       h2 {
       margin-top: 56px;
       margin-bottom: 16px;
+      font-weight: 600;
+      font-size: 36px;
+      text-align: center;
     }
+    .search_input {
+      text-align: center;
+    }
+
   }
 }
 
