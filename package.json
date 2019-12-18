@@ -13,7 +13,8 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "reset-css": "^5.0.1"
   },
   "devDependencies": {
     "@nuxtjs/style-resources": "^1.0.0",
